@@ -25,9 +25,9 @@ server.use(cors());
 server.use(express.json());
 server.use(fileUpload({}));
 server.use('/api', router);
-server.use("/images", function(req:any,res:any){
+/*server.use("/images", function(req:any,res:any){
     fileServer.serve(req,res)
-});
+});*/
 
 
 //обработка ошибок всегда самым последним тк последний middleware
@@ -38,12 +38,12 @@ server.use(errorHandlingMiddleware);
     await sequelize.sync();
     try {
         await app.prepare();
-        server.all('*/images/*', (request: typeof Request, response: typeof Response)=>{
+        /*server.all('*!/images/!*', (request: typeof Request, response: typeof Response)=>{
             request.addListener('end', ()=> {
                 fileServer.serve(request, response);
                 console.log('works')
             }).resume();
-        })
+        })*/
         server.all("*", (req: typeof Request, res: typeof Response) => {
             return handle(req, res);
         });
