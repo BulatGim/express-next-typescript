@@ -1,0 +1,247 @@
+@import "variables";
+
+.sectionCatalog {
+  max-width: 1290px;
+  margin: 150px auto 0 auto;
+
+  &__title {
+
+  }
+
+  .catalogContainer {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    .catalogItem {
+      border: 1px solid $gray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+
+      &__image {
+        width: 260px;
+      }
+
+      &__title {
+        text-align: center;
+        margin-top: 15px;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        box-shadow: 4px 4px 8px 2px rgba(213, 217, 220, 0.7);
+        border: 0;
+      }
+    }
+
+  }
+
+
+  .metalProducts {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    border: 1px solid $gray;
+
+    &:hover {
+      box-shadow: 4px 4px 8px 2px rgba(213, 217, 220, 0.7);
+      border: 0;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      max-width: 781px;
+    }
+
+    &__description {
+      text-align: center;
+      margin-top: 15px;
+      max-width: 750px;
+    }
+
+    .content {
+      display: flex;
+      margin-top: 30px;
+      align-items: center;
+      justify-content: center;
+
+      &__item {
+        margin-left: 20px;
+      }
+
+      &__image {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) and (max-width: 1439px) {
+    max-width: 1170px;
+    .catalogContainer {
+      .catalogItem {
+        &__image {
+          width: 230px;
+        }
+      }
+    }
+  }
+  @media(min-width: 1024px) and (max-width: 1279px) {
+    max-width: 940px;
+    margin-top: 100px;
+    .catalogContainer {
+      margin-top: 30px;
+      gap: 20px;
+      .catalogItem {
+        &__image {
+          width: 180px;
+        }
+      }
+    }
+
+    .metalProducts {
+      margin-top: 20px;
+      padding: 30px 0;
+
+      .content {
+        &__image {
+          max-width: 466px;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    margin-top: 100px;
+    max-width: 640px;
+    .catalogContainer {
+      margin-top: 30px;
+      gap: 15px;
+      .catalogItem {
+        padding: 10px;
+        &__image {
+          width: 105px;
+        }
+      }
+    }
+    .metalProducts {
+      padding: 20px 0;
+      margin-top: 15px;
+      &__title {
+        text-align: center;
+        max-width: 590px;
+      }
+
+      &__description {
+        max-width: 570px;
+      }
+
+      .content {
+        &__image {
+          max-width: 242px;
+        }
+      }
+    }
+  }
+  @media (min-width: 560px) and (max-width: 767px) {
+    margin-top: 50px;
+    max-width: 525px;
+    .catalogContainer {
+      margin-top: 20px;
+      gap: 10px;
+      .catalogItem {
+        padding: 8px;
+        &__image {
+          width: 80px;
+        }
+      }
+    }
+    .metalProducts {
+      padding: 20px 0;
+      margin-top: 15px;
+      &__title {
+        text-align: center;
+        max-width: 460px;
+      }
+
+      &__description {
+        max-width: 460px;
+      }
+
+      .content {
+
+        &__image {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+  @media (min-width: 375px) and (max-width: 559px) {
+    margin-top: 50px;
+    max-width: 335px;
+    .catalogContainer {
+      margin-top: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+
+      .catalogItem {
+        &__image {
+          width: 120px;
+        }
+      }
+    }
+    .metalProducts {
+      padding: 20px 0;
+      margin-top: 20px;
+      &__title {
+        text-align: center;
+        max-width: 290px;
+      }
+
+      .content {
+        flex-direction: column;
+        &__image {
+          margin-top: 10px;
+          max-width: 200px;
+        }
+      }
+    }
+
+  }
+  @media (min-width: 320px) and (max-width: 374px) {
+    max-width: 280px;
+    margin-top: 50px;
+    .catalogContainer {
+      margin-top: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+      row-gap: 10px;
+
+      .catalogItem {
+        padding: 10px;
+        &__image {
+          width: 110px;
+        }
+      }
+    }
+    .metalProducts {
+      padding: 20px 15px;
+      margin-top: 10px;
+      &__title {
+        text-align: center;
+      }
+
+      .content {
+        flex-direction: column;
+        &__image {
+          margin-top: 10px;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}

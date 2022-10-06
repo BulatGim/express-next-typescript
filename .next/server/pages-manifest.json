@@ -1,6 +1,14 @@
 {
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
   "/_app": "pages/_app.js",
-  "/": "pages/index.js"
+  "/_error": "pages/_error.js",
+  "/contacts": "pages/contacts.html",
+  "/factory": "pages/factory.html",
+  "/services": "pages/services.html",
+  "/cases": "pages/cases.js",
+  "/catalog/[id]": "pages/catalog/[id].js",
+  "/cases/[id]": "pages/cases/[id].js",
+  "/": "pages/index.js",
+  "/search/[searchQuery]": "pages/search/[searchQuery].js",
+  "/stand/[id]": "pages/stand/[id].js",
+  "/_document": "pages/_document.js"
 }

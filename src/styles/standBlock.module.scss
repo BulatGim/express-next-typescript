@@ -1,0 +1,30 @@
+.standsBlock{
+  max-width: 1290px;
+  margin: 100px auto 150px auto;
+  &__title{
+    text-transform: uppercase;
+  }
+  @media (min-width: 1280px) and  (max-width: 1439px){
+    max-width: 1170px;
+  }
+  @media(min-width: 1024px) and (max-width: 1279px){
+    max-width: 940px;
+    margin: 100px auto;
+  }
+  @media (min-width: 768px)and (max-width: 1023px){
+    max-width: 640px;
+    margin: 50px auto 100px auto;
+  }
+  @media (min-width: 560px) and (max-width: 767px) {
+    max-width: 525px;
+    margin: 50px auto;
+  }
+  @media (min-width: 375px) and (max-width: 559px) {
+    max-width: 335px;
+    margin: 50px auto;
+  }
+  @media (min-width: 320px) and (max-width: 374px) {
+    max-width: 280px;
+    margin: 50px auto;
+  }
+}

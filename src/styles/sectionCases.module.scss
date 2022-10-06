@@ -1,0 +1,67 @@
+.SectionCases{
+  max-width: 1290px;
+  margin: 150px auto;
+
+  .title{
+    display: flex;
+    justify-content: space-between;
+    &__item{
+
+    }
+    &__button{
+
+    }
+  }
+
+  .casesContainer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (min-width: 1280px) and  (max-width: 1439px){
+    max-width: 1170px;
+    .casesContainer{
+      margin-top: 50px;
+    }
+  }
+  @media(min-width: 1024px) and (max-width: 1279px){
+    margin: 100px auto;
+    max-width: 940px;
+    .casesContainer{
+      margin-top: 30px;
+    }
+  }
+  @media (min-width: 768px)and (max-width: 1023px){
+    max-width: 640px;
+    margin: 100px auto;
+    .casesContainer{
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+  }
+  @media (min-width: 560px) and (max-width: 767px) {
+    max-width: 525px;
+    margin: 50px auto;
+    .casesContainer{
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+  }
+  @media (min-width: 375px) and (max-width: 559px) {
+    max-width: 335px;
+    margin: 50px auto;
+    .casesContainer{
+      margin-top: 20px;
+      flex-direction: column;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 374px) {
+    max-width: 280px;
+    margin: 50px auto;
+    .casesContainer{
+      margin-top: 20px;
+      flex-direction: column;
+
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "variables";
+
+.Header{
+
+  .mobileMenu{
+
+  }
+
+  @media (min-width: 1280px) and  (max-width: 1439px){
+    &__desktop{
+      max-width: 1170px;
+    }
+  }
+  @media(min-width: 1024px) and (max-width: 1279px){
+    &__desktop{
+      max-width: 940px;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 1023px) {
+    &__desktop{
+      display: none;
+    }
+  }
+}

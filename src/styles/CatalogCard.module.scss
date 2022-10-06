@@ -1,0 +1,32 @@
+@import "variables";
+
+.catalogCard{
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #D5D9DC;
+  &__image{
+    width: 100px;
+    height: 100px;
+  }
+  &__description{
+    text-transform: uppercase;
+    margin-left: 15px;
+  }
+  &:hover{
+    box-shadow: 4px 4px 8px 2px rgba(213, 217, 220, 0.7);
+  }
+  @media (min-width: 1280px) and  (max-width: 1439px){
+    &__image{
+      width: 100px;
+      height: 100px;
+    }
+  }
+  @media(min-width: 1024px) and (max-width: 1279px){
+    &__image{
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

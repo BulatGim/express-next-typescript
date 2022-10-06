@@ -1,0 +1,75 @@
+.sectionOurClients{
+  margin: 150px auto;
+  max-width: 1290px;
+  &__title{
+
+  }
+  .container{
+    display: flex;
+    justify-content: space-between;
+    &__item{
+      max-width: 300px;
+    }
+  }
+  @media (min-width: 1280px) and  (max-width: 1439px){
+    max-width: 1170px;
+    .container{
+      &__item{
+        max-width: 270px;
+      }
+    }
+  }
+  @media(min-width: 1024px) and (max-width: 1279px){
+    max-width: 940px;
+    margin: 100px auto;
+
+    .container{
+      &__item{
+        max-width: 220px;
+      }
+    }
+  }
+  @media (min-width: 768px)and (max-width: 1023px){
+    max-width: 640px;
+    margin: 100px auto;
+
+    .container{
+      &__item{
+        max-width: 145px;
+      }
+    }
+  }
+  @media (min-width: 560px) and (max-width: 767px) {
+    max-width: 525px;
+    margin: 50px auto;
+
+    .container{
+      &__item{
+        max-width: 120px;
+      }
+    }
+  }
+  @media (min-width: 375px) and (max-width: 559px) {
+    max-width: 335px;
+    margin: 50px auto;
+
+    .container{
+      flex-wrap: wrap;
+      &__item{
+        margin-top: 15px;
+        max-width: 160px;
+      }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 374px) {
+    max-width: 280px;
+    margin: 50px auto;
+    .container{
+      flex-wrap: wrap;
+      &__item{
+        margin-top: 15px;
+        max-width: 128px;
+      }
+    }
+  }
+}

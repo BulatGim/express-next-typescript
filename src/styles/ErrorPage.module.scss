@@ -1,0 +1,152 @@
+.ErrorPage{
+  height: 100vh;
+  width: 1290px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  &__image{
+    position: absolute;
+    z-index: -5;
+    &_boxes{
+      margin-top: 22vh;
+      z-index: -1;
+      margin-left: -200px;
+    }
+    &_error{
+      margin-left: 340px;
+      object-fit: cover;
+    }
+    &_stand{
+      margin-left: 100px;
+      z-index: -2;
+    }
+  }
+  .content{
+    margin-left: auto;
+    margin-right: 75px;
+    .logo{
+
+    }
+    &__title{
+      text-transform: uppercase;
+      margin-top: 50px;
+    }
+    &__text{
+      margin-top: 30px;
+    }
+    .btnsPanel{
+      margin-top: 20px;
+      &__item{
+        margin-right: 30px;
+      }
+    }
+  }
+  @media (min-width: 1280px) and  (max-width: 1439px){
+    max-width: 1170px;
+    &__image{
+      &_boxes{
+        width: 435px;
+        margin-left: -100px;
+      }
+      &_error{
+        width: 747px;
+        height: 327px;
+      }
+      &_stand{
+        height: 542px;
+        width: 375px;
+      }
+    }
+  }
+  @media(min-width: 1024px) and (max-width: 1279px){
+    max-width: 940px;
+    &__image{
+      &_boxes{
+        width: 322px;
+        margin-left: -50px;
+      }
+      &_error{
+        width: 700px;
+        height: 300px;
+      }
+      &_stand{
+        width: 277px;
+        height: 401px;
+      }
+    }
+  }
+  @media (min-width: 768px)and (max-width: 1023px){
+    max-width: 640px;
+    &__image{
+      &_boxes{
+        display: none;
+      }
+      &_error{
+        margin-left: 0;
+        width: 640px;
+      }
+      &_stand{
+        display: none;
+      }
+    }
+  }
+  @media (min-width: 560px) and (max-width: 767px) {
+    max-width: 525px;
+    &__image{
+      &_boxes{
+        display: none;
+      }
+      &_error{
+        margin-left: 0;
+        width: 525px;
+      }
+      &_stand{
+        display: none;
+      }
+    }
+  }
+  @media (min-width: 375px) and (max-width: 559px) {
+    max-width: 335px;
+    &__image{
+      &_boxes{
+        display: none;
+      }
+      &_error{
+        margin-left: 0;
+        width: 335px;
+      }
+      &_stand{
+        display: none;
+      }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 374px) {
+    max-width: 280px;
+    &__image{
+      &_boxes{
+        display: none;
+      }
+      &_error{
+        margin-left: 0;
+        width: 280px;
+      }
+      &_stand{
+        display: none;
+      }
+    }
+    .content{
+      &__title{
+        margin-top: 20px;
+      }
+      &__text{
+        margin-top: 10px;
+      }
+      .btnsPanel{
+        display: flex;
+        &__item{
+
+        }
+      }
+    }
+  }
+}

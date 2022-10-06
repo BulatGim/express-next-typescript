@@ -1,0 +1,67 @@
+@import "variables";
+
+.orderStand{
+  .head{
+    text-align: center;
+    &__title{
+
+    }
+    &__subtitle{
+      margin-top: 15px;
+    }
+  }
+  .card{
+    padding: 15px 0;
+    margin: 15px 0;
+    border-bottom: 1px solid $gray;
+    border-top: 1px solid $gray;
+    display: flex;
+    align-items: center;
+    &__img{
+      width: 150px;
+    }
+    .characteristics{
+      margin-left: 10px;
+      &__name{
+
+      }
+      .price{
+        margin-top: 5px;
+        display: flex;
+        &__item{
+          margin-left: 5px;
+        }
+      }
+      .sizes{
+        margin-top: 5px;
+      }
+      .color{
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        &__title{
+
+        }
+        &__activeColor{
+          border-radius: 5px;
+          margin-left: 5px;
+          width: 75px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .submitBtn{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .description{
+    margin-top: 15px;
+    &__item{
+      margin-top: 10px;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 560px) {
+
+  }
+}

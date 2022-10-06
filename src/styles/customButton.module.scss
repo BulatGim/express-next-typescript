@@ -1,0 +1,48 @@
+@import "variables";
+
+  .blueButton{
+    cursor: pointer;
+    border: none;
+    padding: 10px 25px;
+    background-color: $blue;
+    color: $lightGray;
+  }
+  .whiteButton{
+    cursor: pointer;
+    padding: 10px 25px;
+    border: 1px solid $blue;
+    background-color: white;
+    color: $blue;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .blueButton{
+      padding: 10px 14px;
+    }
+    .whiteButton{
+      padding: 10px 14px;
+    }
+  }
+@media (min-width: 560px) and (max-width: 767px) {
+  .blueButton{
+    padding: 10px 14px;
+  }
+  .whiteButton{
+    padding: 10px 14px;
+  }
+}
+@media (min-width: 375px) and (max-width: 559px) {
+  .blueButton{
+    padding: 5px 7px;
+  }
+  .whiteButton{
+    padding: 5px 7px;
+  }
+}
+@media (min-width: 320px) and (max-width: 374px) {
+  .blueButton{
+    padding: 5px 10px;
+  }
+  .whiteButton{
+    padding: 5px 10px;
+  }
+}

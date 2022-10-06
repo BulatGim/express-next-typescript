@@ -1,0 +1,237 @@
+@import "variables";
+
+.casePage{
+  max-width: 1290px;
+  margin: 0 auto;
+  .title{
+    margin: 50px 0;
+  }
+  .head{
+    display: flex;
+    .description{
+      min-height: 245px;
+      background-color: $lightGray;
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      .titles{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__item{
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__item{
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &__mainPhoto{
+      margin-left: 30px;
+      width: 410px;
+      height: 245px;
+      object-fit: cover;
+    }
+  }
+  .caseDescription{
+    margin-top: 50px;
+    &__title{
+
+    }
+    &__content{
+      margin-top: 20px;
+    }
+  }
+
+  .stage{
+    margin-top: 30px;
+    .stageTitle{
+      display: flex;
+      align-items: center;
+      &__stage{
+        margin-left: 30px;
+      }
+    }
+    &__content{
+      margin-top: 25px;
+    }
+  }
+  .img{
+    width: 100%;
+    margin-top: 50px;
+  }
+  @media (min-width: 1280px) and  (max-width: 1439px){
+    max-width: 1170px;
+    .caseDescription{
+      margin-top: 20px;
+      &__title{
+
+      }
+      &__content{
+        margin-top: 20px;
+      }
+    }
+
+  }
+  @media(min-width: 1024px) and (max-width: 1279px){
+    max-width: 940px;
+    .caseDescription{
+      margin-top: 20px;
+      &__title{
+
+      }
+      &__content{
+        margin-top: 20px;
+      }
+    }
+    .stage{
+      margin-top: 20px;
+      .stageTitle{
+        &__stage{
+          margin-left: 30px;
+        }
+      }
+      &__content{
+        margin-top: 20px;
+      }
+    }
+  }
+  @media (min-width: 768px)and (max-width: 1023px){
+    max-width: 640px;
+    .head {
+      flex-direction: column;
+      &__mainPhoto{
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+      }
+    }
+    .caseDescription{
+      margin-top: 20px;
+      &__title{
+
+      }
+      &__content{
+        margin-top: 20px;
+      }
+    }
+    .stage{
+      margin-top: 20px;
+      .stageTitle{
+        &__stage{
+          margin-left: 30px;
+        }
+      }
+      &__content{
+        margin-top: 20px;
+      }
+    }
+  }
+  @media (min-width: 560px) and (max-width: 767px) {
+    max-width: 525px;
+    .head {
+      flex-direction: column;
+      &__mainPhoto{
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+      }
+    }
+    .caseDescription{
+      margin-top: 10px;
+      &__title{
+
+      }
+      &__content{
+        margin-top: 10px;
+      }
+    }
+    .stage{
+      margin-top: 10px;
+      .stageTitle{
+        &__stage{
+          margin-left: 10px;
+        }
+      }
+      &__content{
+        margin-top: 10px;
+      }
+    }
+  }
+  @media (min-width: 375px) and (max-width: 559px) {
+    max-width: 335px;
+    .head {
+      flex-direction: column;
+      &__mainPhoto{
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+      }
+    }
+    .caseDescription{
+      margin-top: 10px;
+      &__title{
+
+      }
+      &__content{
+        margin-top: 10px;
+      }
+    }
+    .stage{
+      margin-top: 10px;
+      .stageTitle{
+        &__stage{
+          margin-left: 10px;
+        }
+      }
+      &__content{
+        margin-top: 10px;
+      }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 374px) {
+    max-width: 280px;
+    .head {
+      flex-direction: column;
+      &__mainPhoto{
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+      }
+    }
+    .caseDescription{
+      margin-top: 10px;
+      &__title{
+
+      }
+      &__content{
+        margin-top: 10px;
+      }
+    }
+    .stage{
+      margin-top: 10px;
+      .stageTitle{
+        &__stage{
+          margin-left: 10px;
+        }
+      }
+      &__content{
+        margin-top: 10px;
+      }
+    }
+  }
+}

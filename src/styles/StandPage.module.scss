@@ -1,0 +1,644 @@
+@import "variables";
+
+.StandPage {
+  max-width: 1290px;
+  margin: 50px auto 150px auto;
+
+  .card {
+    display: flex;
+
+    .imgs {
+      padding: 15px 10px;
+      display: flex;
+      align-items: center;
+      border: 1px solid $blue;
+
+      .imgsContainer {
+        &__item {
+          border: 1px solid $gray;
+
+          &_active {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          }
+        }
+
+        .imgItem {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+        }
+      }
+
+      .activeImg {
+        margin: 0 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__item {
+          width: 470px;
+          height: 645px;
+          object-fit: cover;
+          border: 1px solid $gray;
+          transition: all 0.8s;
+
+          &:hover {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          }
+        }
+
+        .prevBtn {
+          z-index: 1;
+          margin-right: -20px;
+          cursor: pointer;
+
+          &__img {
+            transform: rotate(180deg);
+          }
+        }
+
+        .nextBtn {
+          z-index: 1;
+          margin-left: -20px;
+          cursor: pointer;
+
+          &__img {
+
+          }
+        }
+      }
+    }
+
+    .characteristics {
+      border: 1px solid $blue;
+
+      .mainPanel {
+        border-bottom: 1px solid $blue;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+
+        .article {
+          display: flex;
+          background-color: $blue;
+          color: white;
+          padding: 5px 50px;
+          margin-right: 0;
+          margin-left: auto;
+        }
+
+        .mainPanelContainer {
+          margin: 20px 30px 0 30px;
+
+          &__name {
+            text-transform: uppercase;
+          }
+
+          .order {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .price {
+              display: flex;
+              align-items: center;
+
+              &__number {
+                margin-left: 5px;
+              }
+            }
+
+            .optPrice {
+              cursor: pointer;
+              color: $blue;
+              border: 1px solid $blue;
+              padding: 10px 20px;
+            }
+          }
+        }
+      }
+
+      .content {
+        background-color: $lightGray;
+        padding: 50px 30px 50px 30px;
+
+        .sizes {
+          display: flex;
+
+          &__item {
+            .title {
+
+            }
+
+            .description {
+              border: 1px solid $blue;
+              padding: 14px 10px;
+            }
+          }
+        }
+
+        .individualSizes {
+          margin-top: 25px;
+          display: flex;
+          cursor: pointer;
+
+          &__exclamation {
+
+          }
+
+          &__description {
+            text-decoration: underline;
+            color: $blue;
+            margin-left: 15px;
+          }
+        }
+
+        .colorChoose {
+          margin-top: 60px;
+          margin-bottom: 50px;
+
+          .description {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .colorChooseContent {
+              display: flex;
+              align-items: center;
+
+              &__icon {
+
+              }
+
+              &__description {
+                margin-left: 20px;
+              }
+            }
+
+            &__allColors {
+              text-decoration: underline;
+              color: $blue;
+              cursor: pointer;
+            }
+          }
+
+          .colors {
+            margin-top: 35px;
+            display: flex;
+            justify-content: space-between;
+
+            &__item {
+              width: 80px;
+              height: 50px;
+              border-radius: 5px;
+            }
+          }
+        }
+        .orderBtn{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .description {
+    margin-top: 50px;
+
+    .panel {
+      display: flex;
+
+      &__item {
+        background-color: $lightGray;
+        border: 1px solid $blue;
+        padding: 10px;
+
+        .name {
+          color: $blue;
+        }
+
+        &_active {
+          background-color: $blue;
+
+          .name {
+            color: white;
+          }
+        }
+      }
+    }
+
+    .content {
+      padding: 30px;
+      border: 1px solid $blue;
+    }
+  }
+
+  @media (min-width: 1280px) and (max-width: 1439px) {
+    max-width: 1170px;
+    .card {
+      .imgs {
+        .activeImg {
+          margin: 0 25px;
+
+          &__item {
+            width: 420px;
+          }
+        }
+      }
+
+      .characteristics {
+        .mainPanel {
+          .mainPanelContainer {
+            margin: 20px 15px 0 15px;
+          }
+        }
+
+        .content {
+          padding: 50px 15px;
+        }
+      }
+    }
+    .content {
+      padding: 30px 20px;
+    }
+  }
+  @media(min-width: 1024px) and (max-width: 1279px) {
+    max-width: 940px;
+    .card {
+      .imgs {
+        .imgsContainer {
+          height: 90%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .imgItem {
+            width: 120px;
+            height: 120px;
+          }
+        }
+
+        .activeImg {
+          margin: 0 20px;
+
+          &__item {
+            height: 600px;
+            width: 300px;
+          }
+        }
+      }
+
+      .characteristics {
+        .mainPanel {
+          .mainPanelContainer {
+            margin: 20px 15px 0 15px;
+          }
+        }
+
+        .content {
+          padding: 40px 15px;
+
+          .sizes {
+            &__item {
+              .description {
+                margin-top: 10px;
+              }
+            }
+          }
+
+          .colorChoose {
+            margin-top: 40px;
+
+            .colors {
+              &__item {
+                width: 60px;
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content {
+      padding: 30px 20px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    max-width: 640px;
+    .card {
+      flex-direction: column;
+
+      .imgs {
+        flex-direction: column-reverse;
+        .imgsContainer {
+          margin-top: 20px;
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .imgItem {
+            width: 140px;
+            height: 100px;
+          }
+        }
+
+        .activeImg {
+          margin: 0 20px;
+
+          &__item {
+            height: 360px;
+            width: 180px;
+          }
+        }
+      }
+
+      .characteristics {
+        margin-top: 10px;
+        .mainPanel {
+          .mainPanelContainer {
+            margin: 20px 15px 0 15px;
+          }
+        }
+
+        .content {
+          padding: 40px 15px;
+
+          .sizes {
+            &__item {
+              .description {
+                margin-top: 10px;
+              }
+            }
+          }
+
+          .colorChoose {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            .colors {
+              &__item {
+                width: 110px;
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content {
+      padding: 30px 20px;
+    }
+  }
+
+@media (min-width: 560px) and (max-width: 767px) {
+  max-width: 525px;
+  margin-bottom: 50px;
+  .card {
+    flex-direction: column;
+
+    .imgs {
+      flex-direction: column-reverse;
+      .imgsContainer {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .imgItem {
+          width: 115px;
+          height: 70px;
+        }
+      }
+
+      .activeImg {
+        margin: 0 20px;
+
+        &__item {
+          height: 360px;
+          width: 180px;
+        }
+      }
+    }
+
+    .characteristics {
+      margin-top: 10px;
+      .mainPanel {
+        padding-bottom: 25px;
+        .mainPanelContainer {
+          margin: 20px 15px 0 15px;
+        }
+      }
+
+      .content {
+        padding: 15px 15px;
+
+        .sizes {
+          &__item {
+            .description {
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .colorChoose {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          .description{
+            margin-top: 30px;
+          }
+          .colors {
+            margin-top: 30px;
+            &__item {
+              width: 85px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    padding: 30px 20px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 559px) {
+  max-width: 335px;
+  margin-bottom: 50px;
+  .card {
+    flex-direction: column;
+
+    .imgs {
+      flex-direction: column-reverse;
+      .imgsContainer {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .imgItem {
+          width: 70px;
+          height: 55px;
+        }
+      }
+
+      .activeImg {
+        margin: 0 20px;
+
+        &__item {
+          height: 360px;
+          width: 180px;
+        }
+      }
+    }
+
+    .characteristics {
+      margin-top: 10px;
+      .mainPanel {
+        padding-bottom: 25px;
+        .mainPanelContainer {
+          margin: 20px 15px 0 15px;
+        }
+      }
+
+      .content {
+        padding: 15px 15px;
+
+        .sizes {
+          &__item {
+            .description {
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .colorChoose {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          .description{
+            margin-top: 30px;
+          }
+          .colors {
+            margin-top: 30px;
+            &__item {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .description{
+    margin-top: 20px;
+    .content {
+      padding: 15px 15px;
+    }
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  max-width: 280px;
+  margin-bottom: 50px;
+  .card {
+    flex-direction: column;
+
+    .imgs {
+      flex-direction: column-reverse;
+      .imgsContainer {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .imgItem {
+          width: 56px;
+          height: 55px;
+        }
+      }
+
+      .activeImg {
+        margin: 0 20px;
+
+        &__item {
+          height: 360px;
+          width: 180px;
+        }
+      }
+    }
+
+    .characteristics {
+      margin-top: 10px;
+      .mainPanel {
+        padding-bottom: 25px;
+        .mainPanelContainer {
+          margin: 20px 15px 0 15px;
+          .order{
+            margin-top: 10px;
+            flex-direction: column;
+            align-items: flex-start;
+            .optPrice{
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+
+      .content {
+        padding: 15px 15px;
+
+        .sizes {
+          &__item {
+            .description {
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .colorChoose {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          .description{
+            margin-top: 30px;
+          }
+          .colors {
+            margin-top: 30px;
+            &__item {
+              width: 35px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .description{
+    margin-top: 20px;
+    .content {
+      padding: 15px 15px;
+    }
+  }
+}
+
+}
+@keyframes prevSlide {
+  from {
+    transform: translateX(-10%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes nextSlide {
+  from {
+    transform: translateX(10%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

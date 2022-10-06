@@ -1,0 +1,70 @@
+.casesPage{
+  max-width: 1290px;
+  margin: 0 auto;
+  &__title{
+    margin-top: 50px;
+  }
+  .content{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  @media (min-width: 1280px) and  (max-width: 1439px){
+    max-width: 1170px;
+  }
+  @media(min-width: 1024px) and (max-width: 1279px){
+    max-width: 940px;
+    &__title{
+      margin-top: 30px;
+    }
+    .content {
+      margin-top: 30px;
+      gap: 20px;
+    }
+  }
+  @media (min-width: 768px)and (max-width: 1023px){
+    max-width: 640px;
+    &__title{
+      margin-top: 30px;
+    }
+    .content {
+      margin-top: 30px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+  @media (min-width: 560px) and (max-width: 767px) {
+    max-width: 525px;
+    &__title{
+      margin-top: 20px;
+    }
+    .content {
+      margin-top: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+  @media (min-width: 375px) and (max-width: 559px) {
+    max-width: 335px;
+    &__title{
+      margin-top: 20px;
+    }
+    .content {
+      margin-top: 20px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 374px) {
+    max-width: 280px;
+    &__title{
+      margin-top: 20px;
+    }
+    .content {
+      margin-top: 20px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+  }
+}

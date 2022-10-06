@@ -1,11 +1,15 @@
 import next from "next";
-import express, { Request, Response } from "express";
-import path from "path";
+const express = require("express")
+const path = require("path")
+let staticFiles = require('node-static');
+
+let fileServer = new staticFiles.Server(path.resolve(__dirname, 'static'));
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 const port = process.env.PORT || 3000;
+
 
 require('dotenv').config();
 const sequelize = require('./db');
@@ -14,14 +18,17 @@ const cors = require('cors');
 const fileUpload = require('express-fileupload');
 const router = require('./routes/index');
 const errorHandlingMiddleware = require("./middleware/ErrorHandlingMiddleware");
-
 const server = express();
+const {Request, Response} = require("./consts/consts")
 
 server.use(cors());
 server.use(express.json());
-server.use(express.static(path.resolve(__dirname, 'static')));
 server.use(fileUpload({}));
 server.use('/api', router);
+server.use("/images", function(req:any,res:any){
+    fileServer.serve(req,res)
+});
+
 
 //обработка ошибок всегда самым последним тк последний middleware
 server.use(errorHandlingMiddleware);
@@ -31,10 +38,16 @@ server.use(errorHandlingMiddleware);
     await sequelize.sync();
     try {
         await app.prepare();
-
-        server.all("*", (req: Request, res: Response) => {
+        server.all('*/images/*', (request: typeof Request, response: typeof Response)=>{
+            request.addListener('end', ()=> {
+                fileServer.serve(request, response);
+                console.log('works')
+            }).resume();
+        })
+        server.all("*", (req: typeof Request, res: typeof Response) => {
             return handle(req, res);
         });
+
         server.listen(port, (err?: any) => {
             if (err) throw err;
             console.log(`> Ready on localhost:${port} - env ${process.env.NODE_ENV}`);
@@ -44,3 +57,7 @@ server.use(errorHandlingMiddleware);
         process.exit(1);
     }
 })();
+
+
+
+export {};

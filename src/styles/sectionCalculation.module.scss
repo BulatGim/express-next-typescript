@@ -1,0 +1,193 @@
+@import "variables";
+
+.sectionCalculation{
+  position: relative;
+  .decoration{
+    &__item{
+      top: -90%;
+      position: absolute;
+      z-index: -1;
+      &_left{
+        left: 0;
+      }
+      &_right{
+        right: 0;
+      }
+    }
+  }
+  .content{
+    background-color: white;
+    margin: 150px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1290px;
+    .description{
+      max-width: 580px;
+      &__title{
+        text-transform: uppercase;
+      }
+      &__item{
+        margin-top: 15px;
+      }
+    }
+    .form{
+      max-width: 630px;
+      .attachment{
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        &__label{
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          .attachmentIcon{
+            padding: 11px 11px;
+            background-color: $blue;
+            display: flex;
+            align-items: center;
+            &__content{
+              width: 16px;
+            }
+          }
+          .attachmentDescription{
+            padding: 8px 15px;
+            border: 1px solid $blue;
+            &__content{
+              color: $blue;
+            }
+          }
+        }
+        &__inputFile{
+          display: none;
+        }
+        &__description{
+          max-width: 390px;
+        }
+      }
+      .btnSubmit{
+        width: 100%;
+      }
+      &__warning{
+        margin-top: 15px;
+      }
+    }
+  }
+  @media (min-width: 1280px) and  (max-width: 1439px){
+    .content{
+      max-width: 1170px;
+      .form {
+        max-width: 570px;
+        .attachment {
+          &__description {
+            max-width: 350px;
+          }
+        }
+      }
+    }
+  }
+  @media(min-width: 1024px) and (max-width: 1279px){
+    .content{
+      max-width: 940px;
+      margin-top: 100px;
+      .description{
+        max-width: 460px;
+      }
+      .form {
+        max-width: 460px;
+        .attachment {
+          &__label{
+            .attachmentDescription{
+              padding: 9px 12px;
+            }
+          }
+          &__description {
+            max-width: 255px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 768px)and (max-width: 1023px){
+    .content{
+      max-width: 640px;
+      margin-top: 100px;
+      .description{
+        max-width: 250px;
+      }
+      .form {
+        max-width: 400px;
+        .attachment {
+          margin: 10px 0;
+          &__description {
+            max-width: 200px;
+          }
+          &__label{
+            .attachmentDescription{
+              padding: 9px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 560px) and (max-width: 767px) {
+    .decoration{
+      display: none;
+    }
+    .content{
+      margin-top: 50px;
+      max-width: 525px;
+      flex-direction: column;
+      .form {
+        max-width: 570px;
+        .attachment {
+          &__description {
+            max-width: 350px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 375px) and (max-width: 559px) {
+    .decoration{
+      display: none;
+    }
+    .content{
+      margin-top: 50px;
+      flex-direction: column;
+      max-width: 335px;
+      .form {
+        max-width: 570px;
+        .attachment {
+          &__description {
+            max-width: 160px;
+          }
+          &__label{
+            .attachmentDescription{
+              padding: 10px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 374px) {
+    .decoration{
+      display: none;
+    }
+    .content{
+      max-width: 280px;
+      margin-top: 50px;
+      flex-direction: column;
+      .form {
+        max-width: 570px;
+        .attachment {
+          &__description {
+            max-width: 100px;
+          }
+        }
+      }
+    }
+  }
+}

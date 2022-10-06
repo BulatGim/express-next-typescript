@@ -1,0 +1,75 @@
+@import "variables";
+
+.formInput{
+  margin-top: 15px;
+  &__item{
+    width: 100%;
+    padding: 10px 10px;
+    height: 45px;
+    border: 1px solid $blue;
+    color: $blue;
+    resize: none;
+    font-size: 20px;
+    &::placeholder{
+      font-size: 20px;
+      color: $blue;
+    }
+    &_comment{
+      height: 130px;
+    }
+    &_error{
+      border: 1px solid #8F4545;
+      color: #8F4545;
+      &::placeholder{
+        color: #8F4545;
+      }
+    }
+  }
+  .errorDescription{
+    color: #8F4545;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    margin-top: 10px;
+    &__item{
+      height: 35px;
+      font-size: 14px;
+      padding: 8px 8px;
+      &::placeholder{
+        font-size: 14px;
+      }
+    }
+  }
+  @media (min-width: 560px) and (max-width: 767px){
+    margin-top: 10px;
+    &__item{
+      height: 35px;
+      font-size: 14px;
+      padding: 8px 8px;
+      &::placeholder{
+        font-size: 14px;
+      }
+    }
+  }
+  @media (min-width: 375px) and (max-width: 559px){
+  margin-top: 10px;
+  &__item{
+    height: 35px;
+    font-size: 14px;
+    padding: 8px 8px;
+    &::placeholder{
+      font-size: 14px;
+    }
+  }
+}
+  @media (min-width: 320px) and (max-width: 374px) {
+    margin-top: 10px;
+    &__item{
+      height: 35px;
+      font-size: 14px;
+      padding: 8px 8px;
+      &::placeholder{
+        font-size: 14px;
+      }
+    }
+  }
+}

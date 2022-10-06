@@ -1,0 +1,96 @@
+@import "variables";
+
+.sorting {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    margin-right: 30px;
+  }
+
+  .customSelect {
+    width: 230px;
+
+    .selected {
+      border: 1px solid $blue;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+
+      &__name {
+        color: $blue;
+      }
+
+      &__img {
+        &_rotate {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .container {
+      width: 230px;
+      position: absolute;
+      background-color: white;
+
+      .selectItem {
+        padding: 12px 16px;
+        border-bottom: 1px solid $blue;
+
+        &__name {
+          color: $blue;
+        }
+
+        &_active {
+          background-color: $blue;
+
+          &__name {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 375px) and (max-width: 559px) {
+    &__title {
+      margin-right: 20px;
+    }
+    .customSelect {
+      width: 150px;
+
+      .selected {
+        padding: 7px 10px;
+      }
+
+      .container {
+        width: 150px;
+
+        .selectItem {
+          padding: 7px 10px;
+        }
+      }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 374px) {
+    &__title {
+      margin-right: 20px;
+    }
+    .customSelect {
+      width: 150px;
+
+      .selected {
+        padding: 7px 10px;
+      }
+
+      .container {
+        width: 150px;
+
+        .selectItem {
+          padding: 7px 10px;
+        }
+      }
+    }
+  }
+}
