@@ -1,4 +1,9 @@
-import {number} from "prop-types";
+
+export interface IActiveColor {
+    id:number;
+    ral: string;
+    color: string;
+}
 
 export interface IStand {
     id: number;

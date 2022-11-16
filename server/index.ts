@@ -25,9 +25,9 @@ server.use(cors());
 server.use(express.json());
 server.use(fileUpload({}));
 server.use('/api', router);
-/*server.use("/images", function(req:any,res:any){
+server.use("/images", function(req:any,res:any){
     fileServer.serve(req,res)
-});*/
+});
 
 
 //обработка ошибок всегда самым последним тк последний middleware

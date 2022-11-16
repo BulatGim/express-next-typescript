@@ -16,6 +16,8 @@ import OrderStand from "../../molecules/orderStand/orderStand";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../store";
 import {setModal} from "../../layers/serviceLayer";
+import {ColorChoose} from "../../molecules/colorChoose/colorChoose";
+import {Color} from "../../atoms/Color/Color";
 
 
 interface IStandPageProps {
@@ -25,6 +27,8 @@ interface IStandPageProps {
 
 const StandPage: NextPage<IStandPageProps> = ({stands, stand}) => {
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const activeColor = useSelector((state:any)=>state.mail.values.activeColor)
 
     const dispatch = useDispatch();
 
@@ -72,10 +76,60 @@ const StandPage: NextPage<IStandPageProps> = ({stands, stand}) => {
             id: 6,
             ral:"2020",
             color: "#F6B92E"
+        },{
+            id: 7,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 8,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 9,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 10,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 11,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 12,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 13,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 14,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 15,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 16,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 17,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 18,
+            ral:"2020",
+            color: "#F6B92E"
+        },{
+            id: 19,
+            ral:"2020",
+            color: "#F6B92E"
         },
     ];
-
-    const [activeColor, setActiveColor] = useState(colors[0])
 
     function createMarkup() {
         return {__html: activeDescription};
@@ -158,7 +212,7 @@ const StandPage: NextPage<IStandPageProps> = ({stands, stand}) => {
                             </div>
                             <div className={styles.individualSizes}>
                                 <img className={styles.individualSizes__exclamation} src={exclamation.src} alt="Заказать изготовление по индивидуальным размерам"/>
-                                <span className={styles.individualSizes__description} onClick={()=> dispatch(setModal(<OrderStand stand={stand}/>))}>Заказать изготовление по индивидуальным размерам</span>
+                                <span className={styles.individualSizes__description} onClick={()=> dispatch(setModal(<OrderStand/>))}>Заказать изготовление по индивидуальным размерам</span>
                             </div>
                             <div className={styles.colorChoose}>
                                 <div className={styles.description}>
@@ -166,17 +220,22 @@ const StandPage: NextPage<IStandPageProps> = ({stands, stand}) => {
                                         <img className={styles.colorChooseContent__icon} src={chooseColorIcon.src} alt="Выберите цвет"/>
                                         <span className={styles.colorChooseContent__description}>Выберите цвет</span>
                                     </div>
-                                    <span className={styles.description__allColors}>Смотреть все цвета</span>
+                                    <span
+                                        className={styles.description__allColors}
+                                        onClick={()=>dispatch(setModal(<ColorChoose colors={colors}/>))}
+                                    >
+                                        Смотреть все цвета
+                                    </span>
                                 </div>
                                 <div className={styles.colors}>
-                                    {colors.slice(0, 5).map((item, index) =>
-                                        <div className={styles.colors__item} style={{backgroundColor: item.color}} key={index}>
-
-                                        </div>
+                                    <Color color={activeColor}/>
+                                    {colors.slice(0, 4).map((item, index) =>
+                                        item.color !== activeColor.color &&
+                                        <Color color={item} key={item.id}/>
                                     )}
                                 </div>
                             </div>
-                            <CustomButton className={styles.orderBtn} callBack={()=>dispatch(setModal(<OrderStand stand={stand} activeColor={activeColor}/>))}>
+                            <CustomButton className={styles.orderBtn} callBack={()=>dispatch(setModal(<OrderStand/>))}>
                                 <h4>Заказать</h4>
                             </CustomButton>
                         </div>

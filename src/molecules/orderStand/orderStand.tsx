@@ -10,19 +10,15 @@ import CustomButton from "../../atoms/CustomButton/CustomButton";
 import styles from "../../styles/orderStand.module.scss"
 import axios from "axios";
 import {setModal} from "../../layers/serviceLayer";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import SuccessForm from "../successForm/successForm";
+import {RootState} from "../../store";
 
 interface IOrderStandProps {
-    stand: IStand;
-    activeColor?: {
-        id:number;
-        ral: string;
-        color: string;
-    }
+
 }
 
-const OrderStand:NextPage<IOrderStandProps> = ({stand, activeColor}) => {
+const OrderStand:NextPage<IOrderStandProps> = () => {
     const dispatch = useDispatch();
     const [values, setValues] = useState<IFormValuesForm>({phone: "+7(___)___-__-__"});
     const [userError, setUserError] = useState([])
@@ -34,6 +30,8 @@ const OrderStand:NextPage<IOrderStandProps> = ({stand, activeColor}) => {
     const {hideUserError, showUserError} = useUserErrors(userError, setUserError)
 
     const {phoneInputMask, nameValidation, emailValidation} = useValidations(showUserError, hideUserError, values, handleBigChange)
+
+    const {activeColor, stand} = useSelector((state:RootState)=>state.mail.values)
 
     async function send() {
         emailValidation();
@@ -65,7 +63,11 @@ const OrderStand:NextPage<IOrderStandProps> = ({stand, activeColor}) => {
             </div>
             {stand ?(
                 <div className={styles.card}>
-                    <img className={styles.card__img} src={`${process.env.NEXT_PUBLIC_IMAGE_SERVER_URL+stand.photo[0]}`} alt="Фото стеллажа"/>
+                    <img
+                        className={styles.card__img}
+                        src={`${process.env.NEXT_PUBLIC_IMAGE_SERVER_URL+stand.photo[0]}`}
+                        alt="Фото стеллажа"
+                    />
                     <div className={styles.characteristics}>
                         <h4 className={styles.characteristics__name}>{stand.name}</h4>
                         <div className={styles.price}>
@@ -75,7 +77,7 @@ const OrderStand:NextPage<IOrderStandProps> = ({stand, activeColor}) => {
                         <span className={styles.sizes}>Размер: {stand.height}x{stand.width}x({stand.deep})</span>
                         <div className={styles.color}>
                             <span className={styles.color__title}>Цвет:</span>
-                            <div className={styles.color__activeColor} style={{backgroundColor: activeColor?.color || ""}}>
+                            <div className={styles.color__activeColor} style={{backgroundColor: activeColor.color || ""}}>
 
                             </div>
                         </div>
